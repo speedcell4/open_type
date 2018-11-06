@@ -1,4 +1,5 @@
 import argparse
+
 parser = argparse.ArgumentParser()
 parser.add_argument("model_id", help="Identifier for model")
 # Data
@@ -29,7 +30,8 @@ parser.add_argument("-remove_open", help="Remove supervision from headwords", de
 
 # Model
 parser.add_argument("-multitask", help="Using a multitask loss term.", default=False, action='store_true')
-parser.add_argument("-enhanced_mention", help="Use attention and cnn for mention representation", default=False, action='store_true')
+parser.add_argument("-enhanced_mention", help="Use attention and cnn for mention representation", default=False,
+                    action='store_true')
 parser.add_argument("-lstm_type", default="two", choices=["two", "single"])
 parser.add_argument("-dim_hidden", help="The number of hidden dimension.", default=100, type=int)
 parser.add_argument("-rnn_dim", help="The number of RNN dimension.", default=100, type=int)
